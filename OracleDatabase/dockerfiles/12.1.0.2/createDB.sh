@@ -70,7 +70,6 @@ echo "$ORACLE_PDB=
 # Remove second control file, make PDB auto open
 sqlplus / as sysdba << EOF
    ALTER SYSTEM SET control_files='$ORACLE_BASE/oradata/$ORACLE_SID/control01.ctl' scope=spfile;
-   ALTER PLUGGABLE DATABASE $ORACLE_PDB SAVE STATE;
 EOF
 
 # Remove temporary response file
